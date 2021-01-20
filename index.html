@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center">
+    <h1>Payment</h1>
+    <h3>
+        Starting payment amount is 20 euro
+        <p>Enter amount as rupees equal to euro</p>
+    </h3>
+    <input type="text" name="name" id="name" required style="margin-top: 10px" placeholder="Name"/><br/>
+    <input type="text" name="amount" id="amount" required style="margin-top: 10px" placeholder="Amount"/><br/>
+    <button id="buy_now_btn" style="margin-top: 10px">Buy Now</button>
+    <script src="https://js.stripe.com/v3/"></script>
+    {#
+    <script>
+        const checkout_public_key = '{{checkout_public_key}}';
+        const checkout_session_id = '{{checkout_session_id}}';
+    </script>
+    #}
+    <script src="{{ url_for('static', filename='js/script-ajax.js') }}"></script>
+</div>
+</body>
+</html>
